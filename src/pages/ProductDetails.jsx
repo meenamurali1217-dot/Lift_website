@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
+import { asset } from '../utils/asset';
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -57,7 +58,7 @@ export default function ProductDetails() {
             <div className="lg:col-span-6 space-y-4">
               <div className="relative rounded-3xl overflow-hidden border border-[#0799E8]/30 shadow-2xl h-[380px] sm:h-[460px] bg-slate-900">
                 <img
-                  src={activeImage}
+                  src={asset(activeImage)}
                   alt={product.name}
                   className="w-full h-full object-cover transition-all duration-300"
                 />
@@ -80,7 +81,7 @@ export default function ProductDetails() {
                         activeImage === imgUrl ? 'border-[#0799E8] scale-105 shadow-md' : 'border-slate-700 opacity-60 hover:opacity-100'
                       }`}
                     >
-                      <img src={imgUrl} alt={`Thumbnail ${i+1}`} className="w-full h-full object-cover" />
+                      <img src={asset(imgUrl)} alt={`Thumbnail ${i+1}`} className="w-full h-full object-cover" />
                     </button>
                   ))}
                 </div>

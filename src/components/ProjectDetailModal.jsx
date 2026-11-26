@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, MapPin, Building, ArrowRight, CheckCircle2, Calendar, Gauge } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { asset } from '../utils/asset';
 
 export default function ProjectDetailModal({ project, isOpen, onClose }) {
   if (!isOpen || !project) return null;
@@ -34,7 +35,7 @@ export default function ProjectDetailModal({ project, isOpen, onClose }) {
         {/* Hero Visual */}
         <div className="relative h-64 sm:h-80 w-full overflow-hidden">
           <img 
-            src={project.image} 
+            src={asset(project.thumb || project.image)} 
             alt={project.title} 
             className="w-full h-full object-cover"
           />

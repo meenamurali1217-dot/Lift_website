@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import { team, companyStats } from '../data/team';
 import CTASection from '../components/CTASection';
+import { asset } from '../utils/asset';
 
 export default function About() {
   const coreValues = [
@@ -78,7 +79,7 @@ export default function About() {
           <div className="lg:col-span-6 relative">
             <div className="relative group">
               <img
-                src="/about/about-collage.jpg"
+                src={asset('/about/about-collage.jpg')}
                 alt="BlueStar Elevator Engineering, Manufacturing & Installation"
                 className="w-full h-auto rounded-3xl shadow-2xl border border-slate-100 hover:shadow-[#0799E8]/20 transition-all duration-300"
               />

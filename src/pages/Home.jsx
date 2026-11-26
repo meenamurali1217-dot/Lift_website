@@ -9,6 +9,7 @@ import FeatureStrip from '../components/FeatureStrip';
 import CitySkylineArt from '../components/CitySkylineArt';
 import ProjectDetailModal from '../components/ProjectDetailModal';
 import { projects } from '../data/projects';
+import { asset } from '../utils/asset';
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -20,7 +21,7 @@ export default function Home() {
       id: 'passenger-elevators',
       title: 'Passenger Lifts',
       subtitle: 'For homes & offices',
-      image: '/products/passenger-lift.jpg',
+      image: asset('/products/passenger-lift.jpg'),
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
           <rect x="4" y="2" width="16" height="20" rx="2" />
@@ -34,14 +35,14 @@ export default function Home() {
       id: 'goods-elevators',
       title: 'Goods Lifts',
       subtitle: 'For heavy loads',
-      image: '/products/goods-lift.jpg',
+      image: asset('/products/goods-lift.jpg'),
       icon: <Box className="w-4 h-4" />
     },
     {
       id: 'hospital-elevators',
       title: 'Hospital Lifts',
       subtitle: 'For healthcare',
-      image: '/products/hospital-lift.jpg',
+      image: asset('/products/hospital-lift.jpg'),
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
           <path d="M12 6v12M6 12h12" />
@@ -52,7 +53,7 @@ export default function Home() {
       id: 'panoramic-elevators',
       title: 'Panoramic Lifts',
       subtitle: 'For architectural appeal',
-      image: '/products/panoramic-lift.jpg',
+      image: asset('/products/panoramic-lift.jpg'),
       icon: <Sparkles className="w-4 h-4" />
     }
   ];
@@ -61,22 +62,22 @@ export default function Home() {
   const homeProjects = [
     {
       ...projects[0],
-      thumb: '/projects/project-1.jpg',
+      thumb: asset('/projects/project-1.jpg'),
       label: 'Commercial Office Tower'
     },
     {
       ...projects[3],
-      thumb: '/projects/project-2.jpg',
+      thumb: asset('/projects/project-2.jpg'),
       label: 'Grand Retail Galleria Atrium'
     },
     {
       ...projects[1],
-      thumb: '/projects/project-3.jpg',
+      thumb: asset('/projects/project-3.jpg'),
       label: 'Grade-A Corporate Headquarters'
     },
     {
       ...projects[2],
-      thumb: '/projects/project-4.jpg',
+      thumb: asset('/projects/project-4.jpg'),
       label: 'Luxury Residential Towers'
     }
   ];
@@ -86,22 +87,22 @@ export default function Home() {
     {
       quote: "BlueStar Lifts delivered a premium elevator solution with excellent service and professional support.",
       attribution: "— Business Partner, India",
-      avatar: "/avatar-client.jpg"
+      avatar: asset('/avatar-client.jpg')
     },
     {
       quote: "Whisper-quiet ride quality and flawless laser-guided hoistway alignment. Their 24/7 technical team is outstanding.",
       attribution: "— Chief Project Director, Mumbai",
-      avatar: "/avatar-client.jpg"
+      avatar: asset('/avatar-client.jpg')
     },
     {
       quote: "The bespoke glass panoramic elevators elevated our shopping mall atrium into an iconic architectural landmark.",
       attribution: "— Head of Retail Infrastructure, Pune",
-      avatar: "/avatar-client.jpg"
+      avatar: asset('/avatar-client.jpg')
     },
     {
       quote: "Zero downtime across our super-specialty hospital. Code Blue trauma override works with millimetric leveling.",
       attribution: "— Hospital Medical Superintendent, Delhi",
-      avatar: "/avatar-client.jpg"
+      avatar: asset('/avatar-client.jpg')
     }
   ];
 
@@ -287,7 +288,7 @@ export default function Home() {
             <div className="lg:col-span-3 relative">
               <div className="h-64 sm:h-72 w-full rounded-2xl rounded-l-[50px] lg:rounded-l-[90px] overflow-hidden border border-[#0799E8]/30 shadow-2xl relative">
                 <img
-                  src="/skyscraper.jpg"
+                  src={asset('/skyscraper.jpg')}
                   alt="Modern Glass Skyscraper Low Angle"
                   className="w-full h-full object-cover object-center"
                 />

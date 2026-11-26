@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Gauge, Users } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function ProductCard({ product }) {
   return (
@@ -8,7 +9,7 @@ export default function ProductCard({ product }) {
       {/* Product Image with Hover Zoom */}
       <div className="relative h-64 overflow-hidden bg-slate-900">
         <img
-          src={product.heroImage}
+          src={asset(product.heroImage)}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
           loading="lazy"

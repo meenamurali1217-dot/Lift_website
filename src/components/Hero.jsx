@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play } from 'lucide-react';
 import VideoModal from './VideoModal';
+import { asset } from '../utils/asset';
 
 export default function Hero() {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Hero() {
       {/* Background Hero Image provided in reference */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-[center_right] lg:bg-center"
-        style={{ backgroundImage: `url('/hero-bg.png')` }}
+        style={{ backgroundImage: `url('${asset('/hero-bg.png')}')` }}
       ></div>
 
       {/* Subtle responsive gradient overlay for mobile/tablet readability while preserving elevator visibility */}

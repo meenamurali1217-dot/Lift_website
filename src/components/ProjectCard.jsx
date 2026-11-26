@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ArrowUpRight, Building2, Layers } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export default function ProjectCard({ project, onSelect }) {
   return (
@@ -10,7 +11,7 @@ export default function ProjectCard({ project, onSelect }) {
       {/* Project Image */}
       <div className="relative h-64 overflow-hidden bg-slate-900">
         <img
-          src={project.image}
+          src={asset(project.thumb || project.image)}
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
           loading="lazy"
