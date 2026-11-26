@@ -1,0 +1,36 @@
+{
+  "quotes": [
+    {
+      "id": "BSL-QT-041446-629",
+      "fullName": "Priya Sharma",
+      "companyName": "Apex Health Systems",
+      "email": "priya.s@apexhealth.in",
+      "phone": "9876543210",
+      "projectLocation": "Saket, New Delhi",
+      "buildingType": "Hospital & Healthcare Facility",
+      "elevatorType": "Hospital Bed & Stretcher Elevators",
+      "floors": 14,
+      "units": 4,
+      "projectDescription": "Need 4 stretcher bed elevators with Code Blue priority override.",
+      "status": "Pending Review",
+      "createdAt": "2026-11-25T07:50:41.446Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "BSL-INQ-041432-277",
+      "fullName": "Aarav Mehta",
+      "email": "aarav.mehta@nexusproperties.in",
+      "phone": "+91 98201 54321",
+      "companyName": "Nexus Properties Ltd",
+      "subject": "New Elevator Installation",
+      "message": "Looking for 6 high-speed passenger elevators for upcoming commercial tower in BKC.",
+      "status": "New",
+      "createdAt": "2026-11-25T07:50:41.432Z"
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-11-25T07:50:41.431Z",
+    "version": "1.0.0"
+  }
+}
