@@ -8,6 +8,9 @@ import Hero from '../components/Hero';
 import FeatureStrip from '../components/FeatureStrip';
 import CitySkylineArt from '../components/CitySkylineArt';
 import ProjectDetailModal from '../components/ProjectDetailModal';
+import LocationSection from '../components/LocationSection';
+import CompanyGallery from '../components/CompanyGallery';
+import GoogleReviews from '../components/GoogleReviews';
 import { projects } from '../data/projects';
 import { asset } from '../utils/asset';
 
@@ -467,6 +470,15 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Google Maps – Company Location */}
+      <LocationSection />
+
+      {/* Our Company Gallery – Automatic Image Slider */}
+      <CompanyGallery />
+
+      {/* Google Customer Reviews – Automatic Slider */}
+      <GoogleReviews />
 
       {/* Project Detail Modal */}
       <ProjectDetailModal 

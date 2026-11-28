@@ -98,9 +98,9 @@ export default function Contact() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#15283B]">Mumbai Corporate Office</h4>
+                  <h4 className="font-bold text-[#15283B]">BlueStar Lifts Registered Office</h4>
                   <p className="text-xs text-[#667789] mt-0.5 leading-relaxed">
-                    Level 5, Star Towers, G-Block, Bandra Kurla Complex (BKC), Bandra East, Mumbai, Maharashtra 400051, India
+                    HNO 4-1/206, Flat No. 206, MR Palace, Narapally, Hyderabad, Medchal Malkajgiri, Telangana – 500088, India.
                   </p>
                 </div>
               </div>
@@ -344,22 +344,22 @@ export default function Contact() {
       {/* Embedded Google Map Section */}
       <section className="pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
-          <div className="p-4 bg-white border-b border-slate-200 flex items-center justify-between">
+          <div className="p-4 bg-white border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <span className="text-xs font-bold text-slate-700 flex items-center">
-              <MapPin className="w-4 h-4 text-[#0799E8] mr-1.5" /> BlueStar Lifts Headquarters – Bandra Kurla Complex (BKC), Mumbai
+              <MapPin className="w-4 h-4 text-[#0799E8] mr-1.5 shrink-0" /> BlueStar Lifts – Narapally, Hyderabad, Telangana (500088)
             </span>
             <a
-              href="https://maps.google.com/?q=Bandra+Kurla+Complex+Mumbai"
+              href="https://www.google.com/maps/search/?api=1&query=HNO+4-1%2F206+Flat+No+206+MR+PALACE+NARAPALLY+Hyderabad+Telangana+500088+India"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold text-[#0799E8] hover:underline flex items-center"
+              className="text-xs font-semibold text-[#0799E8] hover:underline flex items-center shrink-0"
             >
-              Open Full Map <ExternalLink className="w-3 h-3 ml-1" />
+              Get Directions & Open Full Map <ExternalLink className="w-3 h-3 ml-1" />
             </a>
           </div>
           <iframe
-            title="BlueStar Lifts Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8358215982823!2d72.8631481!3d19.0687723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8e03e7e0123%3A0x6a0a037dfc89d2c4!2sBandra%20Kurla%20Complex!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            title="BlueStar Lifts Narapally Hyderabad Location"
+            src="https://www.google.com/maps?q=HNO+4-1%2F206+Flat+No+206+MR+PALACE+NARAPALLY+Hyderabad+Telangana+500088+India&output=embed"
             width="100%"
             height="380"
             style={{ border: 0 }}

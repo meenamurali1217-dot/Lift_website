@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { SOCIAL_CONFIG } from '../data/socialLinks';
 
 export default function Footer() {
   return (
@@ -131,11 +132,16 @@ export default function Footer() {
                   info@bluestarlifts.in
                 </a>
               </li>
-              <li className="flex items-center space-x-2.5 text-slate-400">
-                <MapPin className="w-4 h-4 text-[#0799E8] shrink-0" />
-                <span>
-                  New Delhi, India
-                </span>
+              <li className="flex items-start space-x-2.5 text-slate-400">
+                <MapPin className="w-4 h-4 text-[#0799E8] shrink-0 mt-0.5" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=HNO+4-1%2F206+Flat+No+206+MR+PALACE+NARAPALLY+Hyderabad+Telangana+500088+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors leading-relaxed text-xs"
+                >
+                  HNO 4-1/206, Flat No. 206, MR Palace, Narapally, Hyderabad, Medchal Malkajgiri, Telangana – 500088, India.
+                </a>
               </li>
             </ul>
           </div>
@@ -146,35 +152,24 @@ export default function Footer() {
               Follow Us
             </h4>
             <div className="flex items-center space-x-2.5">
-              {/* LinkedIn */}
+              {/* Instagram */}
               <a 
-                href="https://linkedin.com" 
+                href={SOCIAL_CONFIG.instagram} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white text-[#031426] hover:bg-[#0799E8] hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
-                aria-label="LinkedIn"
+                aria-label="Instagram"
               >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2m1.4 9.74V9.92H5.06v8.58z"/>
-                </svg>
-              </a>
-
-              {/* YouTube */}
-              <a 
-                href="https://youtube.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white text-[#031426] hover:bg-[#0799E8] hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
-                aria-label="YouTube"
-              >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                 </svg>
               </a>
 
               {/* Facebook */}
               <a 
-                href="https://facebook.com" 
+                href={SOCIAL_CONFIG.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white text-[#031426] hover:bg-[#0799E8] hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
@@ -185,18 +180,32 @@ export default function Footer() {
                 </svg>
               </a>
 
-              {/* Instagram */}
+              {/* YouTube */}
               <a 
-                href="https://instagram.com" 
+                href={SOCIAL_CONFIG.youtube} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-white text-[#031426] hover:bg-[#0799E8] hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
-                aria-label="Instagram"
+                aria-label="YouTube"
               >
-                <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+
+              {/* Google Reviews & Location */}
+              <a 
+                href={SOCIAL_CONFIG.google} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white text-[#031426] hover:bg-[#0799E8] hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
+                aria-label="Google Reviews and Maps Location"
+              >
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
                 </svg>
               </a>
             </div>

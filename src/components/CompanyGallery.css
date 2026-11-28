@@ -1,0 +1,100 @@
+/* CompanyGallery.css - BlueStar Lifts */
+
+.company-gallery-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-carousel-viewport {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 10px 0;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.gallery-slide-card {
+  flex: 0 0 calc(33.333% - 16px);
+  margin: 0 8px;
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -6px rgba(6, 27, 50, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+}
+
+.gallery-slide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(7, 153, 232, 0.18);
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-slide-card:hover .gallery-image {
+  transform: scale(1.08);
+}
+
+.gallery-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(6, 27, 50, 0.85);
+  backdrop-filter: blur(8px);
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.gallery-card-content {
+  padding: 18px 20px 22px;
+  background: #ffffff;
+}
+
+/* Tablet: 2 slides */
+@media (max-width: 1024px) {
+  .gallery-slide-card {
+    flex: 0 0 calc(50% - 16px);
+  }
+  .gallery-image-wrapper {
+    height: 240px;
+  }
+}
+
+/* Mobile: 1 slide */
+@media (max-width: 640px) {
+  .gallery-slide-card {
+    flex: 0 0 calc(100% - 16px);
+  }
+  .gallery-image-wrapper {
+    height: 220px;
+  }
+}

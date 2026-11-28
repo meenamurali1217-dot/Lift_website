@@ -1,0 +1,69 @@
+/* GoogleReviews.css - BlueStar Lifts */
+
+.google-reviews-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-carousel-viewport {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 10px 0;
+}
+
+.reviews-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.review-slide-card {
+  flex: 0 0 calc(33.333% - 16px);
+  margin: 0 8px;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 24px -6px rgba(6, 27, 50, 0.08);
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  user-select: none;
+}
+
+.review-slide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(7, 153, 232, 0.16);
+  border-color: #cbd5e1;
+}
+
+.google-review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  background: #f8fafc;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Tablet: 2 cards */
+@media (max-width: 1024px) {
+  .review-slide-card {
+    flex: 0 0 calc(50% - 16px);
+  }
+}
+
+/* Mobile: 1 card */
+@media (max-width: 640px) {
+  .review-slide-card {
+    flex: 0 0 calc(100% - 16px);
+    padding: 20px 20px 24px;
+  }
+}
